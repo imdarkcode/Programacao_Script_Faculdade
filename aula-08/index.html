@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 08</title>
+
+        <script>
+            // Criação da classe contato
+            class Contato {
+                constructor(nome, telefone, celular, email) {
+                    this.nome = nome;
+                    this.telefone = telefone;
+                    this.celular = celular;
+                    this.email = email;
+                }
+            }
+
+            function listarContatos(lista) {
+                let textHTML = '';
+                for (let i = 0; i < lista.length; i++) {
+                    textHTML += "<li>Nome: " + lista[i].nome + "<br>Telefone: " + lista[i].telefone + "<br>Celular: " + lista[i].celular + " <br>Email: " + lista[i].email + "</li> <br>"
+                }
+                return textHTML;
+            }
+
+            let listaContatos = [];
+            
+            window.onload = function() {
+                // Executar função ao enviar o formulário
+                document.getElementById("form-contato").onsubmit = function(evento) {
+                    // Impedir a página recarregue ao enviar o formulário
+                    evento.preventDefault();
+                    // Pegar valores dos inputs
+                    let nome = document.getElementById("nome").value;
+                    let telefone = document.getElementById("telefone").value;
+                    let celular = document.getElementById("celular").value;
+                    let email = document.getElementById("email").value;
+                    // Criar um objeto com os valores
+                    let novoContato = new Contato(nome, telefone, celular, email);
+                    // Adicionar o objeto a lista
+                    listaContatos.push(novoContato);
+                    // Escrever o contato na página
+                    document.getElementById("lista").innerHTML = listarContatos(listaContatos);
+                    // Limpar campos
+                    document.getElementById("nome").value = "";
+                    document.getElementById("telefone").value = "";
+                    document.getElementById("celular").value = "";
+                    document.getElementById("email").value = "";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Lista de Contatos</h1>
+        </header>
+
+        <main>
+
+            <form id="form-contato">
+                <input type="text" id="nome" placeholder="Nome">
+
+                <br><br>
+
+                <input type="text" id="telefone" placeholder="Telefone">
+
+                <br><br>
+
+                <input type="text" id="celular" placeholder="Celular">
+
+                <br><br>
+                
+                <input type="text" id="email" placeholder="Email">
+
+                <br><br>
+
+                <button class="button-adicionar">Adicionar</button>
+            </form>
+
+            <ul id="lista">
+            </ul>
+        </main>
+    </body>
+</html>
