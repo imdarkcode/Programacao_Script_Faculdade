@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 06</title>
+        <link rel="stylesheet" href="style.css">
+
+        <script type="text/javascript">
+            let nomes = []; // Declarando array
+            nomes.push('Aline', 'Robson', 'Carmilla', 'Sarah'); //Acrescentando valores ao final
+            nomes[2] = 'Alex'; // Alterar um item
+            nomes.splice(2, 1); // Adicionar ou remover item (posição, quantidade, item1, ...)
+
+            // Exibir os nomes com laço for
+
+            document.write("<h2>Exibição com laço for </h2>"); // Título para especificar
+
+            let text_html = ''; // Variável para ser escrita no html
+            for (let i = 0; i < nomes.length; i++) { // Estrutura de repetição for
+                text_html += "<p>" + nomes[i] + "</p>"; // Salvar os valores na variável
+            }
+
+            document.write(text_html); // Escrever a variavel no html
+
+            // Exibir os nomes com laço while
+
+            document.write("<h2>Exibição com laço while </h2>"); // Título para especificar
+
+            text_html = ''; // Limpar variável do html
+            let posicao = 0; // Variável da posição do item
+            while (posicao < nomes.length) { // Estrutura de repetição while
+                text_html += "<p>" + nomes[posicao] + "<p>"; // Salvar os valores na variável
+                posicao++; // Aumentar a variável posicao a cada repetição
+            }
+
+            document.write(text_html); // Escrever a variavel no html
+
+            // Exibir os nomes com laço for in
+
+            document.write("<h2>Exibição com laço for in </h2>"); // Título para especificar
+
+            text_html = ''; // Limpar variável do html
+            for (let i in nomes) { // Estrutura de repetição for in
+                text_html += "<p>" + nomes[i] + "</p>"; // Salvar os valores na variável
+            }
+
+            document.write(text_html); // Escrever a variavel no html
+        </script>
+    </head>
+
+    <body>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Operação Matemática</title>
+
+        <script>
+           
+            let repetir = true;
+
+            while (repetir == true) {
+                let valor_1 = prompt('Informe o primeiro valor');
+                let valor_2 = prompt('Informe o segundo valor'); 
+                let operacao = prompt('Informe a operação (+ - * /)'); 
+
+                if (!isNaN(valor_1) && !isNaN(valor_2) && valor_1 != '' && valor_2 != '' && valor_1.indexOf(' ') == -1 && valor_2.indexOf(' ') == -1) {
+
+                valor_1 = parseFloat(valor_1);
+                valor_2 = parseFloat(valor_2);
+                
+                    if (operacao == '+') {
+                        resultado = valor_1 + valor_2;
+                        alert('O resultado da soma é ' + resultado);
+                    }
+                    else if (operacao == '-') {
+                        resultado = valor_1 - valor_2;
+                        alert('O resultado da subtração é ' + resultado);
+                    }
+                    else if (operacao == '*') {
+                        resultado = valor_1 * valor_2;
+                        alert('O resultado da multiplicação é ' + resultado);
+                    }
+                    else if (operacao == '/') {
+                        resultado = valor_1 / valor_2;
+                        alert('O resultado da divisão é ' + resultado);
+                    }
+                    else {
+                        alert('Operação inválida')
+                    }
+
+                    while (true) {
+                        continuar = prompt('Deseja fazer outra operação?');
+
+                        if (continuar == "Sim") {
+                            repetir = true;
+                            break
+                        }
+                        else if (continuar == "Não") {
+                            repetir = false;
+                            break
+                        }
+                        else {
+                            alert('Resposta inválida');
+                        }
+                    }
+                }
+                else {
+                    alert('Valores inválidos');
+                }   
+                
+            }
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>
