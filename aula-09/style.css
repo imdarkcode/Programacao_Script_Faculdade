@@ -1,0 +1,4 @@
+body {
+    background-image: url(background.jpg); /* Adicionando imagem ao background */
+    background-size: cover; /* Alterando o tamanho da imagem do background */
+}

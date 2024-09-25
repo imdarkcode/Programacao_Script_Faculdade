@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 09</title>
+        <link rel="stylesheet" href="style.css"> <!-- CSS como arquivo externo -->
+
+        <style> /* CSS embutido */
+            input {
+                display: block; /* Alterarando o display para block */
+                width: 14rem; /* Alterarando a largura */
+                height: 2rem; /* Alterarando a altura */
+                margin-top: 10px; /* Adicionando margem superior */
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 style="text-transform: uppercase; font-family: sans-serif;">Login</h1> <!-- CSS inline -->
+        </header>
+
+        <main>
+            <form method="POST" action="#">
+                <input type="text" placeholder="Ususário">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+
+                <button type="submit">Entrar</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; Login - Todos os direitos reservados</p>
+        </footer>
+    </body>
+</html>
