@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calcular Juros</title>
+
+        <script type="text/javascript">
+            // Função para verificar que o valor for um número
+            function verificarValor(valor) {
+                if (!isNaN(valor) && valor != '' && valor.indexOf(' ') == -1) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+
+            // Função para calcular o juros
+            function calcularJuros(valor, juros) {
+                valor = parseFloat(valor);
+                juros = parseFloat(juros);
+                return valor + valor * (juros/100)
+            }
+
+            // Chamar função ao carregar a página
+            window.onload = function() {
+                // Chamar função ao clicar no botão "Calcular"
+                document.getElementById("btnCalcular").onclick = function() {
+                    // Pegar os valores dos input e guardar nas variáveis
+                    let valor = document.getElementById("valor").value;
+                    let juros = document.getElementById("juros").value;
+
+                    // Verificar se são números
+                    if (verificarValor(valor) && verificarValor(juros)) {
+                        // Escrever o resultado dentro do parágrafo
+                        document.getElementById("lblResultado").innerHTML = "Resultado: " + calcularJuros(valor, juros);
+                    }
+                    else {
+                        alert('Os valores não são números');
+                    }
+
+                };
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Cálculo de Juros</h1>
+
+            <!-- Inputs das notas -->
+            <p><input type="number" placeholder="Valor" id="valor"></p>
+            <p><input type="number" placeholder="Taxa de juros" id="juros"></p>
+
+            <!-- Botão para calcular -->
+            <button id="btnCalcular">Calcular</button>
+            
+            <!-- Parágrafo do resultado -->
+            <p id="lblResultado">Resultado:</p>
+    </body>
+</html>
