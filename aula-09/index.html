@@ -9,31 +9,26 @@
 
         <style> /* CSS embutido */
             input {
-                display: block; /* Alterarando o display para block */
-                width: 14rem; /* Alterarando a largura */
-                height: 2rem; /* Alterarando a altura */
-                margin-top: 10px; /* Adicionando margem superior */
+                display: block;
+                width: 100%;
+                height: 40px;
+                border: none;
+                border-radius: 10px;
             }
         </style>
     </head>
 
     <body>
-        <header>
-            <h1 style="text-transform: uppercase; font-family: sans-serif;">Login</h1> <!-- CSS inline -->
-        </header>
+        <main class="card-login">
+            <h1 style="text-transform: uppercase; font-family: sans-serif; text-align: center; color: #fff;">Login</h1> <!-- CSS inline -->
 
-        <main>
             <form method="POST" action="#">
                 <input type="text" placeholder="Ususário">
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Senha">
 
-                <button type="submit">Entrar</button>
+                <button id="btn-submit" type="submit">Entrar</button>
             </form>
         </main>
-
-        <footer>
-            <p>&copy; Login - Todos os direitos reservados</p>
-        </footer>
     </body>
 </html>
