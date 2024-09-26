@@ -1,5 +1,5 @@
-# Programação Script - Fatec
+# Programação Script
 
 **Descrição:**
 
-Compilado de tods as aulas de `prgramação script` que estou tendo na Fatec de Taquaritinga, utilizando linguagem `HTML`, `CSS` e `Javascript`.
+Códigos que desenvolvi durante minhas aulas de programação script na faculdade utilizando `HTML`, `CSS` e `Javascript`, aqui você encontrará todas as aulas que tive durante o semestre.
