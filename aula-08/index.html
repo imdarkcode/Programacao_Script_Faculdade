@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Aula 08</title>
+        <link rel="stylesheet" href="style.css">
 
         <script>
             // Criação da classe contato
@@ -60,28 +61,25 @@
 
         <main>
 
+            <section class="form-card">
+                <h2>Novo Contato</h2>
+
             <form id="form-contato">
                 <input type="text" id="nome" placeholder="Nome">
-
-                <br><br>
-
                 <input type="text" id="telefone" placeholder="Telefone">
-
-                <br><br>
-
                 <input type="text" id="celular" placeholder="Celular">
-
-                <br><br>
-                
                 <input type="text" id="email" placeholder="Email">
-
-                <br><br>
 
                 <button class="button-adicionar">Adicionar</button>
             </form>
+            </section>
 
-            <ul id="lista">
-            </ul>
+            <section class="lista-card">
+                <h2>Contatos Salvos</h2>
+
+                <ul id="lista"></ul>
+            </section>
+
         </main>
     </body>
 </html>

@@ -1,0 +1,87 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    background-color: #101010;
+    border-radius: 20px;
+    padding: 30px 50px;
+}
+
+.lista-card {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 400px;
+    background-color: #101010;
+    border-radius: 20px;
+    padding: 30px 50px;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+form input, .button-adicionar {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+}
+
+form input {
+    border: solid 1px #101010;
+}
+
+.button-adicionar {
+    background-color: lawngreen;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#lista li {
+    line-height: 24px;
+    color: #fff;
+}
