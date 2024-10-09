@@ -11,4 +11,8 @@ window.onload = function() {
             document.getElementById("tableAnswers").innerHTML = '<tr style="font-size: 20px; height: 20px"> <b>Resposta 2:</b> Os eventos de javascript são "sinais" que cada elemento html pode emitir, por exemplo: Ao clicar em um input de texto o elemento emitirá o evento "onFocus". </tr>' + document.getElementById("tableAnswers").innerHTML;
         }
     }
+
+    document.getElementById("btnLimpar").onclick = function() {
+        document.getElementById("tableAnswers").innerHTML = "";
+    }
 }
