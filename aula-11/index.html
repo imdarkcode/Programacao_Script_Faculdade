@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 11</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <label>
+                Inserir nova tarefa:
+                <input type="text" v-model="tarefa" @keypress.enter="adicionarTarefa()">
+            </label>
+
+            <button @click="adicionarTarefa()">Adicionar Tarefa</button>
+            <button @click="limparLista()">Limpar Lista</button>
+
+            <table>
+                <tr v-for="(item, index) in listaTarefas">
+                    <td>{{ index }}</td>
+                    <td>{{ item }}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    
+    <script src="vue.min.js"></script>
+    <script src="script.js"></script>
+</html>
