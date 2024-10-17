@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pt-br">
+<html lang="pt-br" data-bs-theme="dark">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,7 +12,7 @@
     <body>
         <div class="container" id="app">
             <header>
-                <img src="hearder-img.jpg" alt="notebook com códigos de programação" class="img-fluid" />
+                <img src="hearder-img.jpg" alt="notebook com códigos de programação" class="img-fluid rounded" />
             </header>
 
             <main>
@@ -22,8 +22,22 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="nomeUsuario" placeholder="Nome Completo" />
+                                <label for="nomeUsuario" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nomeUsuario" placeholder="Informe seu nome completo" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Informe seu email" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" placeholder="Informe sua senha" />
+                            </div>
+
+                            <div class="mb-3">
+                                <button class="btn btn-light">Cadastrar</button>
                             </div>
                         </div>
                     </div>
@@ -35,4 +49,5 @@
     </body>
 
     <script src="vue.min.js"></script>
+    <script src="script.js"></script>
 </html>
