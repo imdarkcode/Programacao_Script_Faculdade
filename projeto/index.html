@@ -16,29 +16,60 @@
             </header>
 
             <main>
-                <h1>Cadastro de Usuário</h1>
+                <h1 class="text-center my-3">Cadastro de Usuário</h1>
 
                 <form>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="nomeUsuario" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="nomeUsuario" placeholder="Informe seu nome completo" />
+                                <input type="text" class="form-control" id="nomeUsuario" placeholder="José Carlos Alves" v-model="nome" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label">Telefone</label>
+                                <input type="text" class="form-control" id="telefone" placeholder="(00) 00000-0000" v-model="telefone" />
                             </div>
 
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Informe seu email" />
+                                <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" v-model="email" />
                             </div>
 
                             <div class="mb-3">
                                 <label for="senha" class="form-label">Senha</label>
-                                <input type="password" class="form-control" id="senha" placeholder="Informe sua senha" />
+                                <input type="password" class="form-control" id="senha" placeholder="senha123" v-model="senha" />
                             </div>
 
-                            <div class="mb-3">
-                                <button class="btn btn-light">Cadastrar</button>
+                            <div class="d-grid my-4" v-if="verificarCampos()">
+                                <button @click="cadastrar()" class="btn btn-light">Cadastrar</button>
                             </div>
+    
+                            <div class="d-grid my-4" v-else>
+                                <button class="btn btn-outline-light" disabled>Cadastrar</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Telefone</th>
+                                        <th>Email</th>
+                                        <th>Senha</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr v-for="(usuario, index) in listaUsuarios">
+                                        <td>{{ usuario.nome }}</td>
+                                        <td>{{ usuario.telefone }}</td>
+                                        <td>{{ usuario.email }}</td>
+                                        <td>{{ usuario.senha }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </form>
