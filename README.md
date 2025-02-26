@@ -2,4 +2,4 @@
 
 **Descrição:**
 
-Códigos que desenvolvi durante minhas aulas de programação script na faculdade utilizando `HTML`, `CSS` e `Javascript`, aqui você encontrará todas as aulas que tive durante o semestre.
+Repositório com os códigos que desenvolvi durante as aulas utilizando as linguagem  `HTML`, `CSS` e `Javascript` na disciplina de Programação Script que cursei no 2° Semestre da faculdade de Anásile e Desenvolvimento de Sistemas.
